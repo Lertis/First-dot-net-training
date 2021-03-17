@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using ConsoleCat;
+using ConsoleDigits;
 
 namespace ConsoleApplication
 {
@@ -13,6 +16,13 @@ namespace ConsoleApplication
             Bear bear = new Bear();
             bear.BearVoice();
             bear.Voice();
+
+            Cat cat = new Cat("Red");
+            Console.WriteLine(cat);
+
+            Digits digits = new Digits();
+            List<int> list = digits.GetDigitsByLength(15);
+            list.ForEach(i => Console.Write("{0}\t", i));
         }
     }
 
